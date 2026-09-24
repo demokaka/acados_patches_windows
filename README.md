@@ -62,3 +62,25 @@ or from anywhere:
 ```
 python apply_acados_windows_patches_complete.py --acados-root C:\Users\khanh\deps\acados
 ```
+
+Finally, we also need to patch those files:
+```
+interfaces/acados_matlab_octave/
+├── compare_struct_to_json.m
+├── AcadosSimOptions.m
+└── AcadosSimSolver.m
+```
+
+- The Python version is easiest from the acados root:
+```
+cd C:\path\to\acados
+python apply_acados_json_matlab_patches.py
+```
+- The MATLAB version is intended to be run from:
+```
+<acados>\interfaces\acados_matlab_octave
+```
+with:
+```
+apply_acados_json_matlab_patches
+```
