@@ -1,4 +1,4 @@
-interface_dir = fileparts(which('acados_env_variables_windows_msvc'));
+interface_dir = fileparts(which('acados_env_variables_windows_msvc_s'));
 
 acados_dir = fullfile(interface_dir, '..', '..');
 
