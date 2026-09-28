@@ -84,3 +84,29 @@ with:
 ```
 apply_acados_json_matlab_patches
 ```
+
+
+
+# necessary commandline for running:
+First, run only the 
+```
+acados_install_shared_and_static_windows_msvc( ...
+    '-DACADOS_WITH_QPOASES=ON -DACADOS_WITH_QPDUNES=ON -DACADOS_WITH_OSQP=ON -DCMAKE_POLICY_VERSION_MINIMUM=3.5')
+```
+for installation.
+
+Run 
+```
+acados_env_variables_windows_msvc_s
+```
+each time to source environment variable.
+
+To reconstruct new solver without interupting current build, use
+```
+clear mex;
+```
+
+To patch the libraries and code to win64 msvc quarc after building the solver, use
+```
+configure_quarc_acados('qube3_dc_mpc_acados', ocp.code_gen_options.code_export_directory);
+```
