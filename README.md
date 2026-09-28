@@ -110,3 +110,8 @@ To patch the libraries and code to win64 msvc quarc after building the solver, u
 ```
 configure_quarc_acados('qube3_dc_mpc_acados', ocp.code_gen_options.code_export_directory);
 ```
+
+Copy any dll into the spool folder of quarc for missing libraries error:
+```
+copy "C:\Users\khanh\deps\acados_final\bin\osqp.dll" "%PROGRAMDATA%\QUARC\spool\win64\"
+```
